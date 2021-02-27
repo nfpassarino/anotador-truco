@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolás Passarino">
+    <title>Anotador de Truco</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+</head>
+<body>
+    <section class="pantalla" id="pant1">
+        <img src="img/logo.png" id="logo" />
+        <input type="text" class="input-txt" id="eq1" value="" placeholder="Nosotros" />
+        <input type="text" class="input-txt" id="eq2" value="" placeholder="Ellos" />
+        <div class="validacion oculto" id="msj"><span>El nombre debe tener menos de 10 caracteres</span></div>
+        <div class="puntosmax">
+            <input type="radio" id="a24" name="maxpuntos" value="24" />
+            <label for="a24">A 24</label>
+            <input type="radio" id="a30" name="maxpuntos" value="30" checked />
+            <label for="a30">A 30</label><br>
+        </div>
+        <input type="button" class="btn-1" id="iniciar" value="INICIAR" />
+    </section>
+    <section class="pantalla oculto" id="pant2">
+        <div class="encabezado">
+            <p class="txt" id="ne1">Nosotros</p>
+            <p class="txt" id="max">30</p>
+            <p class="txt" id="ne2">Ellos</p>
+            <p class="txt" id="p1">0</p>
+            <input type="button" class="btn-fin" id="fin" value="FIN" />
+            <p class="txt" id="p2">0</p>
+        </div>
+        <div class="linea-hor"></div>
+        <div class="equipo" id="equipo-1">
+            <img src="img/0.png" class="puntos" id="p11" />
+            <img src="img/0.png" class="puntos" id="p12" />
+            <img src="img/0.png" class="puntos" id="p13" />
+            <img src="img/0.png" class="puntos" id="p14" />
+            <img src="img/0.png" class="puntos" id="p15" />
+            <img src="img/0.png" class="puntos" id="p16" />
+            <div id="op-1" class="puntos">
+                <input class="btn-op" type="button" id="r1" value="-" />
+                <input class="btn-op" type="button" id="s1" value="+" />
+            </div>
+        </div>
+        <div class="linea-vert"></div>
+        <div class="equipo" id="equipo-2">
+            <img src="img/0.png" class="puntos" id="p21" />
+            <img src="img/0.png" class="puntos" id="p22" />
+            <img src="img/0.png" class="puntos" id="p23" />
+            <img src="img/0.png" class="puntos" id="p24" />
+            <img src="img/0.png" class="puntos" id="p25" />
+            <img src="img/0.png" class="puntos" id="p26" />
+            <div id="op-2" class="puntos">
+                <input type="button" class="btn-op" id="r2" value="-" />
+                <input type="button" class="btn-op" id="s2" value="+" />
+            </div>
+        </div>
+        <div class="ganador oculto">
+            <div class="aviso">
+                <p id="mensaje"></p>
+                <input type="button" class="btn-volver" id="volver" value="VOLVER A JUGAR" />
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
