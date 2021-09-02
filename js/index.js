@@ -1,3 +1,4 @@
+/// <reference types='jquery' />
 import {
     iniciarJuego,
     mostrarPuntos,
@@ -5,11 +6,11 @@ import {
     finalizarJuego,
 } from './ui.js';
 
-$(document).ready(function() {
-//pantalla 1
+$(document).ready(function () {
+    //pantalla 1
     $('#iniciar').on('click', iniciarJuego);
 
-//pantalla 2
+    //pantalla 2
     $('#fin').on('click', finalizarJuego);
     $('#volver').on('click', finalizarJuego);
     $('.btn-op').on('click', resolverPuntos);
@@ -22,6 +23,6 @@ $(document).ready(function() {
             $('#p' + eq).text(Number($('#p' + eq).text()) - 1);
         }
         mostrarPuntos(eq);
-        ($('#p' + eq).text() === $('#max').text()) ? ganarJuego(eq) : null;
+        $('#p' + eq).text() === $('#max').text() ? ganarJuego(eq) : null;
     }
 });

@@ -2,8 +2,8 @@ export function iniciarJuego() {
     if ($('#eq1').val().length > 9 || $('#eq2').val().length > 9) {
         $('#msj').removeClass('oculto');
     } else {
-        $('#ne1').text(($('#eq1').val() == '') ? 'Nosotros' : $('#eq1').val());
-        $('#ne2').text(($('#eq2').val() == '') ? 'Ellos' : $('#eq2').val());
+        $('#ne1').text($('#eq1').val() == '' ? 'Nosotros' : $('#eq1').val());
+        $('#ne2').text($('#eq2').val() == '' ? 'Ellos' : $('#eq2').val());
         $('#max').text($('input[name="maxpuntos"]:checked').val());
         $('#msj').addClass('oculto');
         $('#pant1').addClass('oculto');
@@ -28,7 +28,13 @@ export function mostrarPuntos(eq) {
 }
 
 export function ganarJuego(eq) {
-    $('#mensaje').html('&#127942; <strong>' + $('#ne' + eq).text().toUpperCase() + '</strong>&#127942;<br>Ganó la partida <br>¡Felicitaciones!');
+    $('#mensaje').html(
+        '&#127942; <strong>' +
+            $('#ne' + eq)
+                .text()
+                .toUpperCase() +
+            '</strong>&#127942;<br>Ganó la partida <br>¡Felicitaciones!'
+    );
     $('.ganador').removeClass('oculto');
 }
 
